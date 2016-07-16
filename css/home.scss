@@ -1,90 +1,122 @@
 @charset "utf-8";
 
 @keyframes upDown {
-  0%   {opacity: 0; bottom: 0.8rem;}
-  20%  {opacity: 0.1; bottom: 0.7rem;}
-  40%  {opacity: 0.2; bottom: 0.5rem;}
-  60%  {opacity: 0.72; bottom: 0.3rem;}
-  80%  {opacity: 0.86; bottom: 0.2rem;}
-  100% {opacity: 0.9; bottom: 0.1rem;}
+  0%   {opacity: 0; bottom: 1.4rem;}
+  20%  {opacity: 0.1; bottom: 1.3rem;}
+  40%  {opacity: 0.2; bottom: 1.2rem;}
+  60%  {opacity: 0.72; bottom: 1.1em;}
+  80%  {opacity: 0.86; bottom: 0.9rem;}
+  100% {opacity: 1; bottom: 0.8rem;}
 }
 @-webkit-keyframes upDown{
-  0%   {opacity: 0; bottom: 0.8rem;}
-  20%  {opacity: 0.1; bottom: 0.7rem;}
-  40%  {opacity: 0.2; bottom: 0.5rem;}
-  60%  {opacity: 0.72; bottom: 0.3rem;}
-  80%  {opacity: 0.86; bottom: 0.2rem;}
-  100% {opacity: 0.9; bottom: 0.1rem;}
+  0%   {opacity: 0; bottom: 1.4rem;}
+  20%  {opacity: 0.1; bottom: 1.3rem;}
+  40%  {opacity: 0.2; bottom: 1.2rem;}
+  60%  {opacity: 0.72; bottom: 1.1em;}
+  80%  {opacity: 0.86; bottom: 0.9rem;}
+  100% {opacity: 1; bottom: 0.8rem;}
+}
+@keyframes circle{
+  0%{ transform:rotate(0deg); }
+  100%{ transform:rotate(-360deg); }
+}
+@-webkit-keyframes circle{
+  0%{ transform:rotate(0deg); }
+  100%{ transform:rotate(-360deg); }
 }
 .text-danger{
   color:#d9534f;
 }
-.wrapper{
-  color:white;
-  margin: 0;
+
+.music{
+  position: absolute;
+  display: block;
+  top:1.2rem;
+  right: 1.2rem;
+  z-index: 3;
+  font-size: 1.0rem;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.music-circle{
+  animation:circle 1.5s infinite linear;/*匀速 循环*/
+  -webkit-animation:circle 1.5s infinite linear;/*匀速 循环*/
+}
+
+
+.bottom{
+  position: absolute;
+  display: block;
+  text-align: center;
+  font-weight: 100;
+  width:100%;
+  bottom:1rem;
+  z-index: 3;
+  color: white;
+  animation: upDown 1s ease-in-out infinite;
+  -webkit-animation: upDown 1s ease-in-out infinite;
+  -moz-animation: upDown 1s ease-in-out infinite;
+}
+.swiper-container{
+  position: absolute;
   width: 100%;
-  clear: both;
-  >.music{
-    position: absolute;
-    top:1rem;
-    right: 1rem;
-    z-index: 3;
-    font-size: 1.0rem;
+  height: 100%;
+  top:0;
+  left:0;
+
+}
+.swiper-slide{
+  background-image: url('/images/bg1.png');
+  background-size: cover;
+}
+.top-pic-1{
+  position: absolute;
+  top:-1px;
+  min-width: 100%;
+}
+.middle-bottom{
+  position: absolute;
+  top:40%;
+  min-width: 100%;
+  >.middle-pic-1{
+    left: 1rem;
+    min-width: 100%;
   }
-  >.touch-content{
+  >.bottom-pic-1{
     position:absolute;
-    height: 100%;
+    top:60%;
+    min-width: 80%;
+    left: 8%;
+  }
+}
+.top-2{
+  width: 90%;
+  margin: 5%;
+  height: 55%;
+  background: rgba(255,255,0,0.8);
+}
+.bottom-2{
+  min-width: 100%;
+  position: absolute;
+  bottom: 0.5%;
+  left: 0;
+  >.pic1{
+    position: absolute;
+    width: 40%;
+    top: -29%;
+    left: 65%;
+    z-index: 7;
+  }
+  >.pic2{
+    min-width: 90%;
+    position: absolute;
+    top:-14%;
+    z-index: 6;
+  }
+  >.pic3{
     width: 100%;
-    font-size: 1.5rem;
-    text-align: center;
-    color: orangered;
-    margin: 0;
-    transition: all linear 0.5s;
-    -webkit-transition: all linear 0.5s;
-    -moz-transition: all linear 0.5s;
-    overflow: hidden;
-    z-index: 2;
-  }
-  .touch-content.ng-enter,.touch-content.ng-show-remove,
-  .touch-content.ng-leave.ng-leave-active {
-    opacity:0;
-  }
-  .touch-content.ng-leave,.touch-content.ng-show-add,
-  .touch-content.ng-enter.ng-enter-active {
-    opacity:1;
+    z-index: 5;
   }
 
-  >.bottom{
-    position: absolute;
-    display: block;
-    text-align: center;
-    font-weight: 100;
-    width:100%;
-    bottom:1rem;
-    z-index: 3;
-    animation: upDown 0.6s ease-in-out infinite;
-    -webkit-animation: upDown 0.6s ease-in-out infinite;
-    -moz-animation: upDown 0.6s ease-in-out infinite;
-  }
 }
-.name{
-  transition: all linear 0.5s;
-  -webkit-transition: all linear 0.5s;
-  -moz-transition: all linear 0.5s;
-  width: 80%;
-  height: 90%;
-  margin-top: 2rem;
-}
-.name.ng-enter,.name.ng-show-remove,
-.name.ng-leave.ng-leave-active {
-  opacity:0;
-}
-.name.ng-leave,.name.ng-show-add,
-.name.ng-enter.ng-enter-active {
-  opacity:1;
-}
-.current{
-  color: grey!important;
-  background-color: white;
-  font-weight: 900;
-}
+

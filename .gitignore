@@ -2,7 +2,7 @@
 ### Example user template template
 ### Example user template
 
-.idea
+.idea/**/*
 *.iml
 out
 gen### Sass template
@@ -10,3 +10,4 @@ gen### Sass template
 *.css.map
 node_modules
 bower_components
+npm-debug.log
