@@ -26,5 +26,14 @@ $(document).ready(function(){
             $('.music').removeClass('music-circle')
         }
     });
+    $('#dataInfoDepart').on('click',function(){
+        var height=$('#dataInfoDepart').height();
+        $('.layer').css('display','block');
+        $('.layer').css('top','205%');
+    });
+    $('.closeLayer').children('i').on('click',function(){
+        $('.layer').css('display','none');
+        $('.layer').css('top','5%');
+    });
 
 });

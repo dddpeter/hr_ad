@@ -24,9 +24,25 @@
   0%{ transform:rotate(0deg); }
   100%{ transform:rotate(-360deg); }
 }
-.text-danger{
-  color:#d9534f;
+
+@keyframes leftRightHand{
+  0%   {opacity: 0.5; left: 84.5%;}
+  20%  {opacity: 0.6; left: 84%;}
+  40%  {opacity: 0.7; left: 83.5%;}
+  60%  {opacity: 0.8; left: 83%;}
+  80%  {opacity: 0.9; left: 82.5%;}
+  100% {opacity: 1; left: 82%;}
 }
+@-webkit-keyframes leftRightHand{
+  0%   {opacity: 0.5; left: 84.5%;}
+  20%  {opacity: 0.6; left: 84%;}
+  40%  {opacity: 0.7; left: 83.5%;}
+  60%  {opacity: 0.8; left: 83%;}
+  80%  {opacity: 0.9; left: 82.5%;}
+  100% {opacity: 1; left: 82%;}
+}
+
+
 
 .music{
   position: absolute;
@@ -63,10 +79,40 @@
   height: 100%;
   top:0;
   left:0;
-
+}
+.layer{
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  top:5%;
+  left:5%;
+  background: rgba(255,255,0,1);
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.5);
+  //display: none;
+  z-index: 20;
+  .closeLayer{
+    height: 40px;
+    line-height: 40px;
+    width: 80px;
+    text-align: center;
+    margin:5px 0 0 5px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.5);
+    >i{
+      color: white;
+      height: 40px;
+      width: 80px;
+      line-height: 40px;
+      &:before{
+        height: 40px;
+        line-height:40px;
+      }
+    }
+  }
 }
 .swiper-slide{
-  background-image: url('/images/bg1.png');
+  background-image: url('../images/bg1.png');
   background-size: cover;
 }
 .top-pic-1{
@@ -94,6 +140,9 @@
   margin: 5%;
   height: 55%;
   background: rgba(255,255,0,0.8);
+  box-shadow: 0 0 5px 5px grey;
+  -webkit-box-shadow: 0 0 5px 5px grey;
+  border-radius: 10px;
 }
 .bottom-2{
   min-width: 100%;
@@ -116,7 +165,43 @@
   >.pic3{
     width: 100%;
     z-index: 5;
+    bottom: 0;
   }
 
+}
+.top-3{
+  margin-top: 2rem;
+  >.department{
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 70px;
+    text-align: center;
+    box-shadow: 0 0 5px 5px grey;
+    -webkit-box-shadow: 0 0 5px 5px grey;
+    background: rgba(255,255,0,0.8);
+    position: absolute;
+  }
+  >.point{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    left: 82%;
+    top:6%;
+    color: yellow;
+    animation:leftRightHand 0.5s infinite linear;
+    -webkit-animation:leftRightHand 0.5s infinite linear;
+  }
+}
+.bottom-3{
+  min-width: 100%;
+  position: absolute;
+  bottom: 0.5%;
+  left: 0;
+  >.pic1{
+    width: 100%;
+  }
 }
 
