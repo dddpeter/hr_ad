@@ -2,7 +2,8 @@
  * Created by dddpe on 2016-7-15.
  */
 $(document).ready(function(){
-    var audio = document.getElementById("backSound");
+    var audio = document.getElementById("backSound")
+    var currentDepartment={};
     audio.pause();
     var mySwiper = new Swiper ('.swiper-container', {
         direction: 'vertical',
@@ -26,14 +27,32 @@ $(document).ready(function(){
             $('.music').removeClass('music-circle')
         }
     });
-    $('#dataInfoDepart').on('click',function(){
-        var height=$('#dataInfoDepart').height();
+    function jobParsers(deptName,deptCode){
+        $('.departmentList').html(deptName);
+        currentDepartment=departments[deptCode];
+        var list='';
+        $(currentDepartment.Position).each(function(i,v){
+            if(i==0){
+                list+='<li><span>'+v.Title+'<i class="fa fa-hand-o-left fa-2x"></i></span> </span></li>';
+            }
+            else{
+                list+='<li><span>'+v.Title+'</span></li>';
+            }
+        });
+        $('.jobTitle').html(list);
+    }
+    $('.department').on('click',function(){
+        var deptName=$(this).html();
+        var deptCode=$(this).data('dept');
         $('.layer').css('display','block');
-        $('.layer').css('top','205%');
+        $('.layer').css('top','300%');
+        mySwiper.detachEvents();
+        jobParsers(deptName,deptCode);
     });
-    $('.closeLayer').children('i').on('click',function(){
+    $('.closeLayer').on('click',function(){
         $('.layer').css('display','none');
-        $('.layer').css('top','5%');
+        $('.layer').css('top','0');
+        mySwiper.attachEvents();
     });
 
 });
