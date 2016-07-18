@@ -26,22 +26,37 @@
 }
 
 @keyframes leftRightHand{
-  0%   {opacity: 0.5; left: 84.5%;}
-  20%  {opacity: 0.6; left: 84%;}
-  40%  {opacity: 0.7; left: 83.5%;}
-  60%  {opacity: 0.8; left: 83%;}
-  80%  {opacity: 0.9; left: 82.5%;}
-  100% {opacity: 1; left: 82%;}
+  0%   {opacity: 0.5; left: 79.5%;}
+  20%  {opacity: 0.6; left: 79%;}
+  40%  {opacity: 0.7; left: 78.5%;}
+  60%  {opacity: 0.8; left: 78%;}
+  80%  {opacity: 0.9; left: 77.5%;}
+  100% {opacity: 1; left: 77%;}
 }
 @-webkit-keyframes leftRightHand{
-  0%   {opacity: 0.5; left: 84.5%;}
-  20%  {opacity: 0.6; left: 84%;}
-  40%  {opacity: 0.7; left: 83.5%;}
-  60%  {opacity: 0.8; left: 83%;}
-  80%  {opacity: 0.9; left: 82.5%;}
-  100% {opacity: 1; left: 82%;}
+  0%   {opacity: 0.5; left: 79.5%;}
+  20%  {opacity: 0.6; left: 79%;}
+  40%  {opacity: 0.7; left: 78.5%;}
+  60%  {opacity: 0.8; left: 78%;}
+  80%  {opacity: 0.9; left: 77.5%;}
+  100% {opacity: 1; left: 77%;}
 }
-
+@keyframes leftRightHand1{
+  0%   {opacity: 0.5; left: 10px;}
+  20%  {opacity: 0.6; left: 9px;}
+  40%  {opacity: 0.7; left: 8px;}
+  60%  {opacity: 0.8; left: 7px;}
+  80%  {opacity: 0.9; left: 6px;}
+  100% {opacity: 1.0; left: 5px;}
+}
+@-webkit-keyframes leftRightHand1{
+  0%   {opacity: 0.5; left: 10px;}
+  20%  {opacity: 0.6; left: 9px;}
+  40%  {opacity: 0.7; left: 8px;}
+  60%  {opacity: 0.8; left: 7px;}
+  80%  {opacity: 0.9; left: 6px;}
+  100% {opacity: 1.0; left: 5px;}
+}
 
 
 .music{
@@ -82,33 +97,69 @@
 }
 .layer{
   position: absolute;
-  width: 90%;
-  height: 90%;
-  top:5%;
-  left:5%;
-  background: rgba(255,255,0,1);
-  border-radius: 10px;
-  border: 1px solid rgba(0,0,0,0.5);
-  //display: none;
+  width: 100%;
+  height: 100%;
+  background:url("../images/bglayer.jpg");
+  background-size: cover;
+  display: none;
   z-index: 20;
   .closeLayer{
-    height: 40px;
-    line-height: 40px;
-    width: 80px;
+    margin: 10px 0 0 10px;
+    height: 30px;
+    line-height: 30px;
+    background: url('../images/btn-back.png') no-repeat;
+    width: 200px;
+    background-size: auto 100%;
+  }
+  >.departmentList{
+    width: 90%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 30px;
     text-align: center;
-    margin:5px 0 0 5px;
-    border-radius: 10px;
-    background: rgba(0,0,0,0.5);
-    >i{
-      color: white;
-      height: 40px;
-      width: 80px;
-      line-height: 40px;
-      &:before{
-        height: 40px;
-        line-height:40px;
+    box-shadow: 0 0 2px 2px grey;
+    -webkit-box-shadow: 0 0 2px 2px grey;
+    background: #A2B700;
+    position: absolute;
+    color: white;
+    top:10%;
+    left: 5%;
+  }
+  >.jobTitle{
+    width: 90%;
+    height: 60%;
+    overflow: scroll;
+    position: absolute;
+    top:18%;
+    left: 10%;
+    >li{
+      height: 42px;
+      line-height: 42px;
+      background: url('../images/pos-dot.png') no-repeat;
+      background-size: auto 100%;
+      padding-left: 64px;
+      line-height: 42px;
+      text-align: left;
+      font-size: 0.9rem;
+      >span{
+        font-weight: 700;
+        >i{
+          position: relative;
+          top:5px;
+          animation:leftRightHand1 0.5s infinite linear;
+          -webkit-animation:leftRightHand1 0.5s infinite linear;
+        }
       }
     }
+    >li:last-child{
+      background: url('../images/pos-dot-end.png') no-repeat;
+      background-size: auto 100%;
+    }
+  }
+  >.bottom-departList{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
   }
 }
 .swiper-slide{
@@ -140,9 +191,11 @@
   margin: 5%;
   height: 55%;
   background: rgba(255,255,0,0.8);
-  box-shadow: 0 0 5px 5px grey;
-  -webkit-box-shadow: 0 0 5px 5px grey;
+  box-shadow: 0 0 2px 2px grey;
+  -webkit-box-shadow: 0 0 2px 2px grey;
   border-radius: 10px;
+  text-indent: 2em;
+  padding: 1em;
 }
 .bottom-2{
   min-width: 100%;
@@ -169,36 +222,113 @@
   }
 
 }
+.top-2-2{
+  width: 90%;
+  margin: 5%;
+  height: 62%;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 2px 2px grey;
+  -webkit-box-shadow: 0 0 2px 2px grey;
+  border-radius: 10px;
+  >.top-img{
+    position: absolute;
+    width: 25%;
+  }
+  >.img1{
+    left:24.5%
+  }
+  >.img2{
+    left:50.5%;
+  }
+  >.img3{
+    top:17.7%;
+    left:11.5%;
+  }
+  >.img4{
+    top:17.7%;
+    left:37.5%
+
+  }
+  >.img5{
+    top:17.7%;
+    left:63.5%
+  }
+  >.img6{
+    top:32.7%;
+    left:24.5%
+  }
+  >.img7{
+    top:32.7%;
+    left:50.5%
+  }
+  >.img8{
+    top:46.2%;
+    left:68.5%
+  }
+  >.img9{
+    position: absolute;
+    top: 50%;
+    left: 58%;
+  }
+  .top-div{
+    position: absolute;
+    width: 50%;
+    background: rgba(255,255,0,0.8);
+    box-shadow: 0 0 2px 2px grey;
+    -webkit-box-shadow: 0 0 2px 2px grey;
+    border-radius: 10px;
+    font-size:0.6rem;
+    font-weight: 600;
+    padding: 2px 4px;
+    top:53%;
+    left:7%;
+    text-indent: 2em;
+  }
+}
+.bottom-2-2{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  >img{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    width: 55%;
+  }
+}
 .top-3{
   margin-top: 2rem;
   >.department{
-    width: 200px;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 70px;
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 40px;
     text-align: center;
-    box-shadow: 0 0 5px 5px grey;
-    -webkit-box-shadow: 0 0 5px 5px grey;
-    background: rgba(255,255,0,0.8);
+    box-shadow: 0 0 2px 2px grey;
+    -webkit-box-shadow: 0 0 2px 2px grey;
+    background: rgba(255,255,0,1);
     position: absolute;
+    z-index: 6;
+    font-weight: 700;
   }
   >.point{
     display: inline-block;
     width: 100px;
-    height: 50px;
-    line-height: 50px;
+    height: 30px;
+    line-height: 30px;
     position: absolute;
-    left: 82%;
     top:6%;
     color: yellow;
     animation:leftRightHand 0.5s infinite linear;
     -webkit-animation:leftRightHand 0.5s infinite linear;
+    z-index: 5;
   }
 }
 .bottom-3{
-  min-width: 100%;
+  width: 100%;
   position: absolute;
-  bottom: 0.5%;
+  bottom: -1rem;
   left: 0;
   >.pic1{
     width: 100%;
