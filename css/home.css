@@ -182,11 +182,12 @@
     text-align: center;
     box-shadow: 0 0 2px 2px grey;
     -webkit-box-shadow: 0 0 2px 2px grey;
-    background: #A2B700;
+    background: rgba(0, 0, 0, 0.4);
     position: absolute;
     color: white;
     top: 10%;
-    left: 5%; }
+    left: 5%;
+    font-size: 1.2rem; }
   .layer > .jobTitle {
     width: 90%;
     height: 60%;
@@ -201,10 +202,10 @@
       background-size: auto 100%;
       padding-left: 64px;
       line-height: 42px;
-      text-align: left;
-      font-size: 0.9rem; }
+      text-align: left; }
       .layer > .jobTitle > li > span {
-        font-weight: 700; }
+        font-weight: 700;
+        font-size: 1rem; }
         .layer > .jobTitle > li > span > i {
           position: relative;
           top: 5px;
@@ -217,6 +218,110 @@
     position: absolute;
     width: 100%;
     bottom: 0; }
+
+.layerJobDetails {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bglayer.jpg");
+  background-size: cover;
+  top: 0;
+  display: none;
+  z-index: 10; }
+  .layerJobDetails > .headImg {
+    width: 40%;
+    margin: 0 30%; }
+  .layerJobDetails > .jobTitleDetails {
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    margin-top: -16px;
+    color: yellow;
+    background-image: url("../images/layer_jobdetails/jobTitle.png");
+    background-size: cover;
+    z-index: 2; }
+  .layerJobDetails > .jobDetails {
+    width: 98%;
+    padding: 2%;
+    height: 50%;
+    overflow: scroll;
+    margin: 2% 0; }
+    .layerJobDetails > .jobDetails > h2 {
+      font-size: 1.1rem;
+      font-weight: 700; }
+    .layerJobDetails > .jobDetails > ol {
+      list-style: none; }
+      .layerJobDetails > .jobDetails > ol > li {
+        text-indent: 2em; }
+  .layerJobDetails > .jobDetailsBottom {
+    text-align: center;
+    width: 100%;
+    margin-top: 4%; }
+    .layerJobDetails > .jobDetailsBottom > .btn {
+      display: inline-block;
+      width: 100px;
+      height: 40px;
+      line-height: 22px;
+      margin: 0 20px;
+      border-radius: 40px;
+      color: white;
+      box-shadow: 0 0 2px 2px grey;
+      -webkit-box-shadow: 0 0 2px 2px grey;
+      font-weight: 500; }
+    .layerJobDetails > .jobDetailsBottom > .ok {
+      background-color: #5cb85c; }
+    .layerJobDetails > .jobDetailsBottom > .readMore {
+      background-color: #f0ad4e; }
+
+.noticeLayer {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg1.png");
+  background-size: cover;
+  top: 0;
+  z-index: 10;
+  padding: 10px; }
+  .noticeLayer > .reviewMe {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    box-shadow: 0 0 2px 2px white;
+    -webkit-box-shadow: 0 0 2px 2px white;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    margin-top: 9.2px; }
+  .noticeLayer > h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    color: yellow;
+    text-shadow: 0 0 2px  blue;
+    -webkit-text-shadow: 0 0 2px  blue; }
+  .noticeLayer > .notice {
+    padding: 10px;
+    background: rgba(255, 255, 0, 0.8);
+    border-radius: 10px;
+    font-size: 1.1rem;
+    list-style: none;
+    text-indent: 2em;
+    min-height: 70%; }
+    .noticeLayer > .notice > .selectedJob {
+      color: red; }
+  .noticeLayer > .noticeBottom {
+    margin-top: 20px;
+    text-align: center; }
+    .noticeLayer > .noticeBottom > .notice-b-2 {
+      margin: 0 auto;
+      animation: pulse 0.5s infinite linear;
+      -webkit-animation: pulse 0.5s infinite linear; }
 
 .swiper-slide {
   background-image: url("../images/bg1.png");
@@ -249,12 +354,13 @@
   -webkit-box-shadow: 0 0 2px 2px grey;
   border-radius: 10px;
   text-indent: 2em;
-  padding: 1em; }
+  padding: 1em;
+  font-size: 1rem; }
 
 .bottom-2 {
   min-width: 100%;
   position: absolute;
-  bottom: 0.5%;
+  bottom: 0;
   left: 0; }
   .bottom-2 > .pic1 {
     position: absolute;
@@ -330,9 +436,11 @@
   text-align: center; }
   .bottom-2-2 > img {
     position: absolute;
-    bottom: 0;
-    left: 5%;
-    width: 55%; }
+    bottom: 10px;
+    left: 25%;
+    width: 50%;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite; }
 
 .top-3 {
   margin-top: 2rem; }

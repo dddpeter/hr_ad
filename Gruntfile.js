@@ -102,7 +102,10 @@ module.exports = function(grunt) {
       prod: {
         options: {
           optimizationLevel: 7,
-          pngquant: true
+          pngquant: true,
+          progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
+          interlaced: true, //类型：Boolean 默认：false 隔行扫描gif进行渲染
+          multipass: true //类型：Boolean 默认：false 多次优化svg直到完全优化
         },
         files: [
           {expand: true,
@@ -141,18 +144,19 @@ module.exports = function(grunt) {
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+ // grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
+ // grunt.loadNpmTasks('grunt-contrib-jshint');
+  //grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-usemin');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   // Default task.
   grunt.registerTask('default', ['prod']);
+  //production environment
   grunt.registerTask('prod', [
     'copy',                 //复制文件
     'concat',               //合并文件
@@ -162,7 +166,8 @@ module.exports = function(grunt) {
     'usemin',               //HTML处理
     'htmlmin'               //HTML压缩
   ]);
-  grunt.registerTask('default', ['prod']);
+
+  //publish app
   grunt.registerTask('publish', ['clean', 'prod']);
 };
 
