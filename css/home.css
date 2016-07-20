@@ -261,8 +261,6 @@
     .layerJobDetails > .jobDetailsBottom > .btn {
       display: inline-block;
       width: 100px;
-      height: 40px;
-      line-height: 22px;
       margin: 0 20px;
       border-radius: 40px;
       color: white;
@@ -301,7 +299,7 @@
     font-weight: 700;
     width: 100%;
     text-align: center;
-    margin: 10px 0 10px 0;
+    margin: 2px 0 10px 0;
     color: yellow;
     text-shadow: 0 0 2px  blue;
     -webkit-text-shadow: 0 0 2px  blue; }
@@ -316,7 +314,7 @@
     .noticeLayer > .notice > .selectedJob {
       color: red; }
   .noticeLayer > .noticeBottom {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center; }
     .noticeLayer > .noticeBottom > .notice-b-2 {
       margin: 0 auto;

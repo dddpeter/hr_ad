@@ -5,6 +5,7 @@ $(document).ready(function(){
    /* var audio = document.getElementById("backSound");
     audio.pause();*/
     var currentDepartment={};
+    var currentPosition={};
     var mySwiper = new Swiper ('.swiper-container', {
         direction: 'vertical',
         loop: false,
@@ -45,6 +46,7 @@ $(document).ready(function(){
     function jobDetailParser(index){
         var thisJob=currentDepartment.Position[index];
         $('.jobTitleDetails').html(thisJob.Title);
+        currentPosition=thisJob;
         var description='';
         var requirement='';
         if(thisJob.Description){
@@ -97,9 +99,10 @@ $(document).ready(function(){
         $('.layerJobDetails').css('top','0');
         $('.noticeLayer').css('top','300%');
         $('.noticeLayer').css('display','block');
+        $('.selectedJob').html(currentPosition.Title);
     });
     $('.reviewMe').on('click',function(){
-        mySwiper.slideTo(0,0);
+        mySwiper.slideTo(4,0);
         $('.noticeLayer').css('top','0');
         $('.noticeLayer').css('display','none');
         $('.bottom').css('display','block');

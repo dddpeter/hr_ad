@@ -169,7 +169,7 @@
   height: 100%;
   background:url("../images/bglayer.jpg");
   background-size: cover;
-   top:0;
+  top:0;
   display: none;
   z-index: 10;
   >.headImg{
@@ -211,8 +211,6 @@
     >.btn{
       display: inline-block;
       width: 100px;
-      height: 40px;
-      line-height: 22px;
       margin: 0 20px;
       border-radius: 40px;
       color: white;
@@ -224,7 +222,7 @@
       background-color:  #5cb85c;
     }
     >.readMore{
-     background-color: #f0ad4e;
+      background-color: #f0ad4e;
     }
   }
 }
@@ -256,7 +254,7 @@
     font-weight:700;
     width:100%;
     text-align: center;
-    margin: 10px 0 10px 0;
+    margin: 2px 0 10px 0;
     color: yellow;
     text-shadow:0 0 2px  blue;
     -webkit-text-shadow:0 0 2px  blue;
@@ -274,8 +272,8 @@
     }
   }
   >.noticeBottom{
-    margin-top: 20px;
-   text-align: center;
+    margin-top: 10px;
+    text-align: center;
     >.notice-b-2{
       margin: 0 auto;
       animation:pulse 0.5s infinite linear;
@@ -459,4 +457,3 @@
     width: 100%;
   }
 }
-
