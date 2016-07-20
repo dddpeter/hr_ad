@@ -53,9 +53,13 @@ $(document).ready(function(){
             $(thisJob.Description).each(function(i,v){
                 description+='<li>'+(i+1)+'. '+v+'。</li>';
             });
+            $('.JobTaskTitle').css('display','block');
+            $('.JobTask').css('display','block');
 
         }
         else{
+            $('.JobTaskTitle').css('display','none');
+            $('.JobTask').css('display','none');
             description='(无)';
         }
         $(thisJob.Question).each(function(i,v){

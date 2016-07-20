@@ -243,7 +243,7 @@
     z-index: 2; }
   .layerJobDetails > .jobDetails {
     width: 98%;
-    padding: 2%;
+    padding: 3%;
     height: 50%;
     overflow: scroll;
     margin: 2% 0; }
@@ -251,6 +251,7 @@
       font-size: 1.1rem;
       font-weight: 700; }
     .layerJobDetails > .jobDetails > ol {
+      font-size: 0.9rem;
       list-style: none; }
       .layerJobDetails > .jobDetails > ol > li {
         text-indent: 2em; }
