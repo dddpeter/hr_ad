@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "hr ads",
   "main": "index.js",
-  "repository" : {
+  "repository": {
     "type": "git",
     "url": "git@git.coding.net:dddpeter/hr_ad.git"
   },
@@ -28,9 +28,13 @@
   },
   "scripts": {
     "postinstall": "bower install",
+    "build":"grunt prod",
     "prestart": "npm install",
     "start": "http-server -a 0.0.0.0 -p 8000 -c-1 ./"
   },
   "author": "peter lee",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.0"
+  }
 }

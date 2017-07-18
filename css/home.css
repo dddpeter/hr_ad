@@ -2,41 +2,41 @@
 @keyframes upDown {
   0% {
     opacity: 0;
-    bottom: 1.4rem; }
+    bottom: 1rem; }
   20% {
     opacity: 0.1;
-    bottom: 1.3rem; }
+    bottom: 0.8rem; }
   40% {
     opacity: 0.2;
-    bottom: 1.2rem; }
+    bottom: 0.6rem; }
   60% {
     opacity: 0.72;
-    bottom: 1.1em; }
+    bottom: 0.4em; }
   80% {
     opacity: 0.86;
-    bottom: 0.9rem; }
+    bottom: 0.2rem; }
   100% {
     opacity: 1;
-    bottom: 0.8rem; } }
+    bottom: 0.1rem; } }
 @-webkit-keyframes upDown {
   0% {
     opacity: 0;
-    bottom: 1.4rem; }
+    bottom: 1rem; }
   20% {
     opacity: 0.1;
-    bottom: 1.3rem; }
+    bottom: 0.8rem; }
   40% {
     opacity: 0.2;
-    bottom: 1.2rem; }
+    bottom: 0.6rem; }
   60% {
     opacity: 0.72;
-    bottom: 1.1em; }
+    bottom: 0.4em; }
   80% {
     opacity: 0.86;
-    bottom: 0.9rem; }
+    bottom: 0.2rem; }
   100% {
     opacity: 1;
-    bottom: 0.8rem; } }
+    bottom: 0.1rem; } }
 @keyframes circle {
   0% {
     transform: rotate(0deg); }
@@ -126,12 +126,13 @@
 .music {
   position: absolute;
   display: block;
-  top: 1.2rem;
-  right: 1.2rem;
+  top: 0.8rem;
+  right: 0.8rem;
   z-index: 3;
-  font-size: 1.0rem;
-  height: 1.6rem;
-  width: 1.6rem; }
+  font-size: 1.2rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  text-align: center; }
 
 .music-circle {
   animation: circle 1.5s infinite linear;
@@ -145,12 +146,13 @@
   text-align: center;
   font-weight: 100;
   width: 100%;
-  bottom: 1rem;
+  bottom: 0rem;
   z-index: 3;
   color: white;
   animation: upDown 1s ease-in-out infinite;
   -webkit-animation: upDown 1s ease-in-out infinite;
-  -moz-animation: upDown 1s ease-in-out infinite; }
+  -moz-animation: upDown 1s ease-in-out infinite;
+  font-size: 0.8rem; }
 
 .swiper-container {
   position: absolute;
@@ -168,17 +170,16 @@
   display: none;
   z-index: 20; }
   .layer .closeLayer {
-    margin: 10px 0 0 10px;
-    height: 30px;
-    line-height: 30px;
+    margin: 10.2px 0 0 10px;
+    height: 1.4rem;
+    line-height: 1.4rem;
     background: url("../images/btn-back.png") no-repeat;
-    width: 200px;
     background-size: auto 100%; }
   .layer > .departmentList {
     width: 90%;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 30px;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: 1.5rem;
     text-align: center;
     box-shadow: 0 0 2px 2px grey;
     -webkit-box-shadow: 0 0 2px 2px grey;
@@ -187,7 +188,7 @@
     color: white;
     top: 10%;
     left: 5%;
-    font-size: 1.2rem; }
+    font-size: 0.9rem; }
   .layer > .jobTitle {
     width: 90%;
     height: 60%;
@@ -196,24 +197,23 @@
     top: 18%;
     left: 10%; }
     .layer > .jobTitle > li {
-      height: 42px;
-      line-height: 42px;
+      /* height: 42px;5
+       line-height: 42px;*/
       background: url("../images/pos-dot.png") no-repeat;
       background-size: auto 100%;
-      padding-left: 64px;
-      line-height: 42px;
+      padding-left: 135px;
       text-align: left; }
       .layer > .jobTitle > li > span {
         font-weight: 700;
-        font-size: 1rem; }
+        font-size: 0.8rem; }
         .layer > .jobTitle > li > span > i {
           position: relative;
           top: 5px;
           animation: leftRightHand1 0.5s infinite linear;
           -webkit-animation: leftRightHand1 0.5s infinite linear; }
-    .layer > .jobTitle > li:last-child {
-      background: url("../images/pos-dot-end.png") no-repeat;
-      background-size: auto 100%; }
+      .layer > .jobTitle > li:last-child {
+        background: url("../images/pos-dot-end.png") no-repeat;
+        background-size: auto 100%; }
   .layer > .bottom-departList {
     position: absolute;
     width: 100%;
@@ -233,10 +233,11 @@
     margin: 0 30%; }
   .layerJobDetails > .jobTitleDetails {
     width: 100%;
-    height: 56px;
-    line-height: 56px;
+    height: 1.8rem;
+    line-height: 2.1rem;
     text-align: center;
-    margin-top: -16px;
+    margin-top: -1rem;
+    font-size: 0.9rem;
     color: yellow;
     background-image: url("../images/layer_jobdetails/jobTitle.png");
     background-size: cover;
@@ -248,10 +249,10 @@
     overflow: scroll;
     margin: 2% 0; }
     .layerJobDetails > .jobDetails > h2 {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 700; }
     .layerJobDetails > .jobDetails > ol {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       list-style: none; }
       .layerJobDetails > .jobDetails > ol > li {
         text-indent: 2em; }
@@ -261,12 +262,16 @@
     margin-top: 4%; }
     .layerJobDetails > .jobDetailsBottom > .btn {
       display: inline-block;
-      width: 100px;
-      margin: 0 20px;
-      border-radius: 40px;
+      width: 200px;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      margin: 0 1rem;
+      border-radius: 1.5rem;
       color: white;
+      font-size: 0.8rem;
       box-shadow: 0 0 2px 2px grey;
       -webkit-box-shadow: 0 0 2px 2px grey;
+      padding: 0 !important;
       font-weight: 500; }
     .layerJobDetails > .jobDetailsBottom > .ok {
       background-color: #5cb85c; }
@@ -286,15 +291,13 @@
   .noticeLayer > .reviewMe {
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    box-shadow: 0 0 2px 2px white;
-    -webkit-box-shadow: 0 0 2px 2px white;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    margin-top: 9.2px; }
+    display: inline-block;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    border-radius: 1.2rem;
+    font-size: 0.7rem;
+    margin-top: 9.2px;
+    padding: 0 0.8rem; }
   .noticeLayer > h2 {
     font-size: 1.4rem;
     font-weight: 700;
@@ -308,7 +311,7 @@
     padding: 10px;
     background: rgba(255, 255, 0, 0.8);
     border-radius: 10px;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     list-style: none;
     text-indent: 2em;
     min-height: 70%; }
@@ -319,6 +322,7 @@
     text-align: center; }
     .noticeLayer > .noticeBottom > .notice-b-2 {
       margin: 0 auto;
+      width: 50%;
       animation: pulse 0.5s infinite linear;
       -webkit-animation: pulse 0.5s infinite linear; }
 
@@ -354,12 +358,11 @@
   border-radius: 10px;
   text-indent: 2em;
   padding: 1em;
-  font-size: 1rem; }
+  font-size: 0.7rem; }
 
 .bottom-2 {
   min-width: 100%;
   position: absolute;
-  bottom: 0;
   left: 0; }
   .bottom-2 > .pic1 {
     position: absolute;
@@ -445,9 +448,9 @@
   margin-top: 2rem; }
   .top-3 > .department {
     width: 50%;
-    height: 45px;
-    line-height: 45px;
-    border-radius: 45px;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    border-radius: 1.3rem;
     text-align: center;
     box-shadow: 0 0 2px 2px grey;
     -webkit-box-shadow: 0 0 2px 2px grey;
@@ -458,13 +461,13 @@
   .top-3 > .point {
     display: inline-block;
     width: 100px;
-    height: 30px;
-    line-height: 30px;
+    height: 1.3rem;
+    line-height: 1.3rem;
     position: absolute;
-    top: 6%;
     color: yellow;
     animation: leftRightHand 0.5s infinite linear;
     -webkit-animation: leftRightHand 0.5s infinite linear;
+    top: 6%;
     z-index: 5; }
 
 .bottom-3 {
